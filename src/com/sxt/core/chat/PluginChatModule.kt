@@ -8,8 +8,7 @@ import org.bukkit.event.EventPriority
 import org.bukkit.event.player.AsyncPlayerChatEvent
 
 class PluginChatModule : SpigotPluginModule("Chat", PluginCore.coreInstance) {
-
-
+    
     @EventHandler(ignoreCancelled = true, priority = EventPriority.HIGHEST)
     fun onAsyncChat(event: AsyncPlayerChatEvent) {
         event.isCancelled = true
